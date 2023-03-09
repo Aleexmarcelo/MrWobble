@@ -132,9 +132,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36849603}
+  - component: {fileID: 36849604}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,14 +148,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36849602}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.0000005513429}
-  m_LocalPosition: {x: -6.5, y: -28.069168, z: 3.6}
+  m_LocalPosition: {x: -6.5, y: -28.06917, z: 3.6}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 872329320}
+  - {fileID: 845074742}
   m_Father: {fileID: 219831386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!95 &36849604
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36849602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
+  m_Controller: {fileID: 9100000, guid: ea4cd6b08a5ddf94b9f736ed759458cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &58366315
 GameObject:
   m_ObjectHideFlags: 3
@@ -559,7 +580,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 872329320}
+    m_TransformParent: {fileID: 36849603}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
       propertyPath: m_RootOrder
@@ -583,15 +604,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -960,52 +981,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ed77ffe408b1a740b647e53e9171474, type: 3}
   m_PrefabInstance: {fileID: 369285744}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &872329319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 872329320}
-  - component: {fileID: 872329321}
-  m_Layer: 0
-  m_Name: MoveBoss
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &872329320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872329319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 845074742}
-  m_Father: {fileID: 36849603}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &872329321
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872329319}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.31, z: 0.23}
-  m_Center: {x: 0.04, y: 2.15, z: 2.24}
 --- !u!1 &967767762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1091,8 @@ GameObject:
   - component: {fileID: 1399787981}
   - component: {fileID: 1399787983}
   - component: {fileID: 1399787984}
+  - component: {fileID: 1399787985}
+  - component: {fileID: 1399787986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1180,7 +1157,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!114 &1399787984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,8 +1170,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabab096a90798d4da5fa9eec40910da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 5
+  dashSpeed: 0.5
   dashTime: 0.4
+--- !u!95 &1399787985
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399787980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 62f3a13432633a84aa8adff26649b3c4, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9fc7183c23e90f84c9599d532ca7c9cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1399787986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399787980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109b6d3cc1bba5348b3d568353b03f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 1399787983}
+  animator: {fileID: 1399787985}
+  rollForce: 0
 --- !u!1 &1406186940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,9 +1956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicaplay: {fileID: 1643396603}
-  boss1: {fileID: 36849602}
-  novaPosicao: {x: 0, y: 20, z: 0}
-  speedMove: 4
+  animatorBoss: {fileID: 36849604}
 --- !u!135 &2056682794
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class LevelStart : MonoBehaviour
         {
             musicaplay.Play();
             animatorBoss.SetBool("MusicStart", true);
+            Timer timer = FindAnyObjectByType<Timer>();
             Destroy(this.gameObject);
         }
     }

@@ -25,7 +25,13 @@ public class ThirdPersonMovement : MonoBehaviour
     //Dash & Movement
     public Vector3 moveDir;
 
-    // Start is called before the first frame update
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Gatilho"))
+        {
+            Timer timer = FindAnyObjectByType<Timer>();
+        }
+    }
     void Start()
     {
         controller = GetComponent<CharacterController>();

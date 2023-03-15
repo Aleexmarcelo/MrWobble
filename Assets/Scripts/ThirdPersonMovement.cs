@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     public Transform cam;
+
+    //Testes
+    public int maxHealth = 100;
+    public int currentHealth;
+    public TextMeshProUGUI healthText;
+    public UnityEvent onHealthChanged;
 
     //Jump Stuff
     Vector3 velocity;
@@ -37,6 +45,21 @@ public class ThirdPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        currentHealth = maxHealth;
+        UpdateHealthText();
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        onHealthChanged.Invoke();
+        UpdateHealthText();
+    }
+
+    private void UpdateHealthText()
+    {
+        healthText.text = "Health: " + currentHealth.ToString();
     }
 
     // Update is called once per frame

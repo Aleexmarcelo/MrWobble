@@ -16,12 +16,8 @@ public class Timer : MonoBehaviour
     public bool starter = false;
 
     private void Update()
-    {
-        if (starter)
-        {
-            Being(Duration);
-        }
-                
+    {  
+            Being(Duration);             
     }
 
     private void Being(int Second)

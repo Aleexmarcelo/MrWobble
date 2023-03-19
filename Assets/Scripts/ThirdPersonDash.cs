@@ -8,6 +8,8 @@ public class ThirdPersonDash : MonoBehaviour
 
     public float dashSpeed;
     public float dashTime;
+    bool canDash = true;
+
 
     void Start()
     {
@@ -16,7 +18,7 @@ public class ThirdPersonDash : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(canDash && Input.GetMouseButton(0))
         {
             StartCoroutine(Dash());
         }
@@ -24,6 +26,7 @@ public class ThirdPersonDash : MonoBehaviour
 
     IEnumerator Dash()
     {
+        canDash = false;
         float startTime = Time.time;
         while (Time.time < startTime + dashTime)
         {
@@ -31,6 +34,8 @@ public class ThirdPersonDash : MonoBehaviour
 
             yield return null;
         }
+        yield return new WaitForSeconds(2f);
+        canDash = true;
     }
 
 }

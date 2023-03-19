@@ -59,7 +59,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void UpdateHealthText()
     {
-        healthText.text = "Health: " + currentHealth.ToString();
+        //healthText.text = "Health: " + currentHealth.ToString();
     }
 
     // Update is called once per frame

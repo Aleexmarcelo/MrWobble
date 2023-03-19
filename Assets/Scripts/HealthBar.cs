@@ -20,7 +20,6 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        healthText.text = "Health: " + health + "%";
         if (health > maxHealth) health = maxHealth;
 
         lerpSpeed = 3f * Time.deltaTime;
@@ -31,19 +30,20 @@ public class HealthBar : MonoBehaviour
 
     void HealthBarFiller()
     {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / maxHealth), lerpSpeed);
-        ringHealthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / maxHealth), lerpSpeed);
+      //  healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / maxHealth), lerpSpeed);
+      //  ringHealthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (health / maxHealth), lerpSpeed);
 
         for (int i = 0; i < healthPoints.Length; i++)
         {
             healthPoints[i].enabled = !DisplayHealthPoint(health, i);
         }
     }
+
     void ColorChanger()
     {
         Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
-        healthBar.color = healthColor;
-        ringHealthBar.color = healthColor;
+      //  healthBar.color = healthColor;
+       // ringHealthBar.color = healthColor;
     }
 
     bool DisplayHealthPoint(float _health, int pointNumber)
@@ -56,9 +56,11 @@ public class HealthBar : MonoBehaviour
         if (health > 0)
             health -= damagePoints;
     }
+
     public void Heal(float healingPoints)
     {
-        if (health < maxHealth)
+       // if (health < maxHealth)
             health += healingPoints;
     }
+
 }

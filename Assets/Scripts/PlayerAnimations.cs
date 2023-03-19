@@ -7,7 +7,6 @@ public class PlayerAnimations : MonoBehaviour
     public CharacterController characterController;
     public Animator animator;
     private Vector3 inputs;
-    public bool rollForce;
 
     private float speed = 2f;
 

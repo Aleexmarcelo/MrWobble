@@ -13,12 +13,17 @@ public class LevelStart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             musicaplay.Play();
             animatorBoss.SetBool("MusicStart", true);
             Timer timer = FindAnyObjectByType<Timer>();
             Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+
         }
     }
 }

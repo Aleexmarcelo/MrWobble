@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     private int remainingDuration;
     public bool starter = false;
 
-    private void Update()
+    private void Start()
     {  
             Being(Duration);             
     }

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-public int damage = 10;
+    public int damage = 10;
 
-private void OnCollisionEnter(Collision collision)
-{
-    ThirdPersonMovement player = collision.gameObject.GetComponent<ThirdPersonMovement>();
-    if (player != null)
+
+    private void OnTriggerEnter(Collider other)
     {
-        player.TakeDamage(damage);
+        if (other.CompareTag("Player"))
+        {
+            GameObject enemyObject = GameObject.Find("HealthSystem");
+
+        }
     }
-}
 }

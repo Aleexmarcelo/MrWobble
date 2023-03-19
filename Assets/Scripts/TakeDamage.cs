@@ -5,14 +5,14 @@ using UnityEngine;
 public class TakeDamage : MonoBehaviour
 {
     public int damage = 10;
+    public HealthBar healthBar;
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject enemyObject = GameObject.Find("HealthSystem");
-
+            Debug.Log("Damage!");
+            healthBar.Damage(damage);
         }
     }
 }

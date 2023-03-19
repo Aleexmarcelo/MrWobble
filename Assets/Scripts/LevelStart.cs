@@ -9,6 +9,7 @@ public class LevelStart : MonoBehaviour
 {
     public AudioSource musicaplay;
     public Animator animatorBoss;
+    public Animator raioTeste;
 
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +18,7 @@ public class LevelStart : MonoBehaviour
         {
             musicaplay.Play();
             animatorBoss.SetBool("MusicStart", true);
+            raioTeste.SetBool("Raio", true);
             Timer timer = FindAnyObjectByType<Timer>();
             Destroy(this.gameObject);
         }

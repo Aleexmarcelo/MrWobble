@@ -8,6 +8,7 @@ TagManager:
   - Gatilho
   - Damage
   - Enemy
+  - SetaMusica
   layers:
   - Default
   - TransparentFX

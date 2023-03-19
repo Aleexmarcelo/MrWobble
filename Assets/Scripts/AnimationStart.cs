@@ -11,8 +11,8 @@ public class AnimationStart : MonoBehaviour
     {
         if(other.gameObject.tag == "SetaMusica")
         {
-            Debug.Log("Deu.");
             raioStart.SetBool("Raio", true);
+            Destroy(this.gameObject);
         }
     }
 }

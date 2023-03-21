@@ -11,6 +11,6 @@ public class ObjectDestroyTrigger : MonoBehaviour
     private void OnDestroy()
     {
         scriptObject.GetComponent<Timer>().enabled = true;
-        scriptObject.GetComponent<Timer>().starter = true;
+        //  scriptObject.GetComponent<Timer>().starter = true;
     }
 }

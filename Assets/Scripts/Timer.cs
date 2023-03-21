@@ -13,11 +13,13 @@ public class Timer : MonoBehaviour
 
     public int Duration;
     private int remainingDuration;
-    public bool starter = false;
+
 
     private void Start()
-    {  
-            Being(Duration);             
+    {
+        {
+            Being(Duration);
+        }
     }
 
     private void Being(int Second)

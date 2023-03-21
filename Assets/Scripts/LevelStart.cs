@@ -19,13 +19,7 @@ public class LevelStart : MonoBehaviour
             musicaplay.Play();
             animatorBoss.SetBool("MusicStart", true);
             setaStart.SetBool("MusicaStart", true);
-            Timer timer = FindAnyObjectByType<Timer>();
             Destroy(this.gameObject);
-        }
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-
         }
     }
 }

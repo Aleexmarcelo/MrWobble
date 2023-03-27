@@ -15,20 +15,20 @@ public class Timer : MonoBehaviour
     private int remainingDuration;
 
 
-    private void Start()
+    public void Start()
     {
         {
-            Being(Duration);
+            Begin(Duration);
         }
     }
 
-    private void Being(int Second)
+    public void Begin(int Second)
     {
         remainingDuration = Second;
         StartCoroutine(UpdateTimer());
     }
 
-    private IEnumerator UpdateTimer()
+    public IEnumerator UpdateTimer()
     {
         while (remainingDuration >= 0)
         {
@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
         yield break;
     }
 
-    private void OnEnd()
+    public void OnEnd()
     {
         print("END");
     }

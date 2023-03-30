@@ -15,12 +15,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public Transform cam;
 
-    //Testes
-    public int maxHealth = 100;
-    public int currentHealth;
-    public TextMeshProUGUI healthText;
-    public UnityEvent onHealthChanged;
-
     //Jump Stuff
     Vector3 velocity;
     public float gravity = -9.8f;
@@ -45,17 +39,8 @@ public class ThirdPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
-
-        currentHealth = maxHealth;
-        UpdateHealthText();
     }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        onHealthChanged.Invoke();
-        UpdateHealthText();
-    }
+   
 
     private void UpdateHealthText()
     {

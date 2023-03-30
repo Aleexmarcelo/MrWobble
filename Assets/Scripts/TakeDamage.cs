@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    public int damage = 10;
-    public HealthBar healthBar;
+    public int damage = 5;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Damage!");
-            healthBar.Damage(damage);
+            HealthBar healthBar = other.gameObject.GetComponent<HealthBar>();
+            if (healthBar != null)
+            {
+                healthBar.Damage(damage);
+            }
         }
+        Debug.Log("Damage");
     }
 }

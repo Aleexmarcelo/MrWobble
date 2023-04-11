@@ -15,12 +15,12 @@ public class Timer : MonoBehaviour
     private int remainingDuration;
 
 
-    public void Start()
-    {
-        {
-            Begin(Duration);
-        }
-    }
+       public void Start()
+       {
+           {
+               Begin(Duration);
+           }
+       }
 
     public void Begin(int Second)
     {

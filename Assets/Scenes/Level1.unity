@@ -5723,6 +5723,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 716971861704273559, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254104850120350432, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925564488716098195, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087735858197888830, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440707294557746196, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
+      propertyPath: explosionParticlePrefab
+      value: 
+      objectReference: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
     - target: {fileID: 8007911283870579012, guid: 78540d6555f021c44ad33bee80a319ea, type: 3}
       propertyPath: m_RootOrder
       value: 1

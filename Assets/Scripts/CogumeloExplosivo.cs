@@ -1,62 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class CogumeloExplosivo : MonoBehaviour
 {
-    public GameObject prefabToSpawn; // referência ao prefab a ser spawnado
-    public float spawnRadius; // raio em que o prefab será spawnado
-    public int maxSpawnAttempts = 10; // número máximo de tentativas de spawnar antes de desistir
-    public float spawnInterval = 1f; // intervalo de tempo entre spawns
-
-    private float timeUntilNextSpawn; // tempo restante até o próximo spawn
-    private bool canSpawn; // indica se é permitido spawnar
+    public float destroyDelay = 2.7f;
+    public float explosionRadius = 1f;
+    public GameObject explosionPrefab;
+    public int damageAmount = 10;
+    public string playerTag = "Player";
+    public GameObject hudController;
 
     private void Start()
     {
-        canSpawn = false;
+        Invoke("DestroySelf", destroyDelay);
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (canSpawn)
+        if (other.gameObject.CompareTag("Player"))
         {
-            // diminuir o tempo restante até o próximo spawn
-            timeUntilNextSpawn -= Time.deltaTime;
-
-            // verificar se é hora de spawnar
-            if (timeUntilNextSpawn <= 0f)
+            HealthBar healthBar = other.gameObject.GetComponent<HealthBar>();
+            if (healthBar != null)
             {
-                SpawnObject();
-                timeUntilNextSpawn = spawnInterval;
+                healthBar.Damage(damageAmount);
             }
         }
+        Debug.Log("Damage");
     }
 
-    private void SpawnObject()
+    private IEnumerator Explode()
     {
-        // tentar spawnar o prefab várias vezes até encontrar uma posição válida
-        for (int i = 0; i < maxSpawnAttempts; i++)
-        {
-            // gerar uma posição aleatória dentro do raio especificado
-            Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        explosion.transform.localScale = Vector3.one * explosionRadius;
+        yield return new WaitForSeconds(explosion.GetComponent<ParticleSystem>().main.duration);
+        Destroy(explosion);
+        Destroy(gameObject);
 
-            // verificar se a posição gerada está livre para spawnar
-            if (Physics.CheckSphere(spawnPosition, 1f))
-            {
-                // a posição não está livre, tentar novamente
-                continue;
-            }
-
-            // a posição está livre, spawnar o prefab
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-            break;
-        }
     }
 
-    public void StartSpawning()
+    private void DestroySelf()
     {
-        canSpawn = true;
-        timeUntilNextSpawn = spawnInterval;
+        StartCoroutine(Explode());
     }
 }

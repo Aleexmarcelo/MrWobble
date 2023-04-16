@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8007911283870737764
+--- !u!1 &6540192486563063445
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8007911283870579012}
-  - component: {fileID: 8007911283867711844}
-  - component: {fileID: 8007911283868810148}
-  - component: {fileID: 4596238395198815043}
-  - component: {fileID: 4506721847580123623}
-  - component: {fileID: 5440707294557746196}
+  - component: {fileID: 6540192486563063455}
+  - component: {fileID: 6540192486563063440}
+  - component: {fileID: 6540192486563063441}
+  - component: {fileID: 6540192486563063442}
+  - component: {fileID: 6540192486563063443}
+  - component: {fileID: 6540192486563063454}
   m_Layer: 0
   m_Name: CogumeloExplo
   m_TagString: Untagged
@@ -21,36 +21,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8007911283870579012
+--- !u!4 &6540192486563063455
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.114, y: 0.33, z: -21.407}
+  m_LocalPosition: {x: -16.132483, y: 0.2535616, z: -20.6}
   m_LocalScale: {x: 19.496868, y: 19.496868, z: 19.496868}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8007911283867711844
+--- !u!33 &6540192486563063440
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   m_Mesh: {fileID: 4300000, guid: 6c890c97a154a474082af84a379dffce, type: 3}
---- !u!23 &8007911283868810148
+--- !u!23 &6540192486563063441
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,26 +86,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4596238395198815043
+--- !u!65 &6540192486563063442
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.15732333, y: 0.22989728, z: 0.16672885}
   m_Center: {x: 0.0020095594, y: 0.11494864, z: 0.0048203208}
---- !u!54 &4506721847580123623
+--- !u!54 &6540192486563063443
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -115,18 +115,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5440707294557746196
+--- !u!114 &6540192486563063454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007911283870737764}
+  m_GameObject: {fileID: 6540192486563063445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021a0c37859c74e4580e8772fa802b34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cf402eb1a41091419fabbe372825522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTime: 3
-  explosionParticlePrefab: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
-  damage: 5
+  destroyDelay: 2.25
+  explosionRadius: 2
+  explosionPrefab: {fileID: 2965222256817593503, guid: a164e676dbbd6e54587237e619372c98, type: 3}
+  damageAmount: 10
+  playerTag: Player
+  hudController: {fileID: 0}

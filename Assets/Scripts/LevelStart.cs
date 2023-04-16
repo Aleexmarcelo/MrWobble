@@ -21,8 +21,6 @@ public class LevelStart : MonoBehaviour
             animatorBoss.SetBool("MusicStart", true);
             setaStart.SetBool("MusicaStart", true);
             Destroy(gameObject);
-
-            spawner.StartSpawning(); // inicia o spawn dos objetos
         }
     }
 }

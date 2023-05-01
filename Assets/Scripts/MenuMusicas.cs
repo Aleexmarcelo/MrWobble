@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuOptions : MonoBehaviour
-
-
+public class MenuMusicas : MonoBehaviour
 {
+
     public AudioSource click;
-    public void PlayGame()
+    public void PlayMusic1()
     {
-        SceneManager.LoadScene("TelaMusica");
+        SceneManager.LoadScene("Level1");
         click.Play();
     }
 
-    public void Options()
+    public void PlayMusic2()
     {
-        SceneManager.LoadScene("OptionsMenu");
+        SceneManager.LoadScene("Musica2");
         click.Play();
     }
 

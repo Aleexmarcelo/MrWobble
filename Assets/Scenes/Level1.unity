@@ -1449,7 +1449,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256905373}
-  m_LocalRotation: {x: -0.3201524, y: -0.01268114, z: 0.006093652, w: 0.9472616}
+  m_LocalRotation: {x: -0.3201524, y: -0.012681147, z: 0.0060936557, w: 0.9472616}
   m_LocalPosition: {x: 14.602228, y: -1.0338786, z: 37.55124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9320,7 +9320,7 @@ MonoBehaviour:
   musicaplay: {fileID: 1643396603}
   animatorBoss: {fileID: 434998615}
   setaStart: {fileID: 677006062}
-  spawner: {fileID: 0}
+  timer: {fileID: 314296337}
 --- !u!135 &2056682794
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1,10 +1,6 @@
 using System.Collections;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using TMPro;
 
 public class Timer : MonoBehaviour
 {
@@ -13,14 +9,6 @@ public class Timer : MonoBehaviour
 
     public int Duration;
     private int remainingDuration;
-
-
-       public void Start()
-       {
-           {
-               Begin(Duration);
-           }
-       }
 
     public void Begin(int Second)
     {

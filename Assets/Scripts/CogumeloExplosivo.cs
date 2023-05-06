@@ -9,6 +9,7 @@ public class CogumeloExplosivo : MonoBehaviour
     public int damageAmount = 10;
     public string playerTag = "Player";
     public GameObject hudController;
+    public int damage = 5;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class CogumeloExplosivo : MonoBehaviour
             HealthBar healthBar = other.gameObject.GetComponent<HealthBar>();
             if (healthBar != null)
             {
-                healthBar.Damage(damageAmount);
+                healthBar.Damage(damage);
             }
         }
         Debug.Log("Damage");

@@ -9,6 +9,8 @@ TagManager:
   - Damage
   - Enemy
   - SetaMusica
+  - Musica
+  - Video
   layers:
   - Default
   - TransparentFX

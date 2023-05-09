@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TelaMusica.unity
     guid: e58d934abe3299943b9394da0261c2f0
+  - enabled: 1
+    path: Assets/Cena2.unity
+    guid: 76973a0c47cc14b4eaed4f6ab0b8fae6
   m_configObjects: {}

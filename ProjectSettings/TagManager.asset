@@ -11,6 +11,7 @@ TagManager:
   - SetaMusica
   - Musica
   - Video
+  - SpawnStart
   layers:
   - Default
   - TransparentFX

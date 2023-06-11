@@ -12,6 +12,7 @@ TagManager:
   - Musica
   - Video
   - SpawnStart
+  - Reset
   layers:
   - Default
   - TransparentFX

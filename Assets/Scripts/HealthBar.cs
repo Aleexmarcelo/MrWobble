@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
@@ -9,6 +10,7 @@ public class HealthBar : MonoBehaviour
 
     float health, maxHealth = 100;
     float lerpSpeed;
+    public string scene;
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class HealthBar : MonoBehaviour
 
         HealthBarFiller();
         ColorChanger();
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(scene);
+        }
     }
 
     void HealthBarFiller()

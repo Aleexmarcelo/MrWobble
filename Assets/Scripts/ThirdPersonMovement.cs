@@ -40,7 +40,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
     }
-   
 
     private void UpdateHealthText()
     {

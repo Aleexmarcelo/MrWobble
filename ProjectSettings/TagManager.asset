@@ -13,6 +13,7 @@ TagManager:
   - Video
   - SpawnStart
   - Reset
+  - Timer
   layers:
   - Default
   - TransparentFX

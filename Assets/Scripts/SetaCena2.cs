@@ -10,6 +10,7 @@ public class SetaCena2 : MonoBehaviour
     public Animator Seta;
     public AudioSource Musica;
     public RawImage Video;
+    public Timer timer;
     private SpawnCena2 spawnerScript; // Referência para o script SpawnCena2
 
     private void Awake()
@@ -40,6 +41,11 @@ public class SetaCena2 : MonoBehaviour
         if (other.gameObject.tag == "SpawnStart" && spawnerScript != null)
         {
             spawnerScript.AtivarSpawn(true); // Ativa o spawn de gameobjects
+        }
+
+        if(other.gameObject.tag == "Timer")
+        {
+            timer.Begin(292);
         }
     }
 }

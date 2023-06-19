@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Raio1 : MonoBehaviour
 {
-    public Transform startPoint; // Ponto inicial do raio (pedra)
+    /* public Transform startPoint; // Ponto inicial do raio (pedra)
     public GameObject[] objectsToChooseFrom; // Array dos objetos a serem escolhidos
     public float rayDuration = 1.0f; // Duração do raio em segundos
     private LineRenderer lineRenderer;
@@ -58,5 +58,5 @@ public class Raio1 : MonoBehaviour
                 lineRenderer.enabled = false;
             }
         }
-    }
+    } */
 }

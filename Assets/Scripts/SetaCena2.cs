@@ -36,11 +36,13 @@ public class SetaCena2 : MonoBehaviour
         if (other.gameObject.tag == "Gatilho" && spawnerScript != null)
         {
             spawnerScript.AlterarPosicaoSpawn();
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "SpawnStart" && spawnerScript != null)
         {
-            spawnerScript.AtivarSpawn(true); // Ativa o spawn de gameobjects
+            spawnerScript.AtivarSpawn(true);
+            Destroy(other.gameObject);
         }
 
         if(other.gameObject.tag == "Timer")

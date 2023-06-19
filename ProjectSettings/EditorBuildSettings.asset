@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GO2.unity
     guid: ac753bdcba620c043ad5b1e27d218a64
+  - enabled: 1
+    path: Assets/Scenes/demo.unity
+    guid: 199679581e3bb824c9c4c79575f1eef3
   m_configObjects: {}
